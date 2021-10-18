@@ -1,5 +1,6 @@
 import React from "react";
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import logo from "../../Images/logo-1.png";
 
 const NavbarSection = () => {
@@ -9,43 +10,43 @@ const NavbarSection = () => {
         <Container className='mx-20'>
           <div className='flex justify-center items-center'>
             <img src={logo} className='mr-2' width='25px' alt='' />
-            <Navbar.Brand className='font-semibold text-2xl' href='/'>
+            <Navbar.Brand className='font-semibold text-2xl' to='/'>
               Be Better
             </Navbar.Brand>
           </div>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
-            <Nav className='ms-auto'>
-              <Nav.Link
-                className='mr-2 text-black border-b-2 border-transparent hover:border-red-400'
-                href='/'
+            <Nav className='ms-auto flex items-center'>
+              <Link
+                className='mr-4 text-black border-b-2 border-transparent hover:border-red-400'
+                to='/'
               >
                 Home
-              </Nav.Link>
-              <Nav.Link className='mr-2 text-black border-b-2 border-transparent hover:border-red-400' href='/about'>
+              </Link>
+              <Link className='mr-4 text-black border-b-2 border-transparent hover:border-red-400' to='/about'>
                 About
-              </Nav.Link>
-              <Nav.Link className='mr-2 text-black border-b-2 border-transparent hover:border-red-400' href='#link'>
+              </Link>
+              <Link className='mr-4 text-black border-b-2 border-transparent hover:border-red-400' to='#link'>
                 Services
-              </Nav.Link>
-              <Nav.Link
+              </Link>
+              <Link
                 className='px-3 py-1 mr-2 my-auto hover:bg-red-300 hover:text-white rounded-full border-2 border-red-400 text-black'
-                href='/signup'
+                to='/signup'
               >
                 Sign up
-              </Nav.Link>
-              <Nav.Link
+              </Link>
+              <Link
                 className='px-3 py-1 mr-2 my-auto hover:bg-red-300 hover:text-white rounded-full border-2 border-red-400 text-black'
-                href='/signin'
+                to='/signin'
               >
                 Sign in
-              </Nav.Link>
-              <Nav.Link
+              </Link>
+              <Link
                 className='px-3 py-1 mr-2 my-auto hover:bg-red-300 hover:text-white rounded-full border-2 border-red-400 text-black'
-                href='#signin'
+                to='#signin'
               >
                 Log out
-              </Nav.Link>
+              </Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
