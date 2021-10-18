@@ -1,0 +1,27 @@
+.slide1{
+    background-image: url(../../../Images/physio-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slide2{
+    background-image: url(../../../Images/physio-3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slide3{
+    background-image: url(../../../Images/yoga-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slide1-content{
+    clip-path: polygon(0 0, 22% 0, 100% 100%, 0% 100%);
+}
+
+@media only screen and (max-width: 688px) {
+.slide1-content{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+}
