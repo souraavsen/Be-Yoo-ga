@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Signup = () => {
   return (
-    <div className='flex h-screen pt-28 -mt-16'>
+    <div className='flex flex-col h-screen pt-24 -mt-16'>
       <form class='w-full max-w-lg mx-auto'>
         <div className='flex mb-6'>
           <div className='w-1/2 bg-red-300 py-2 text-center'>
@@ -82,13 +82,25 @@ const Signup = () => {
             />
           </div>
           <button
-            className='px-8 py-2 text-white font-semibold mt-8 bg-red-400 rounded-full mx-auto hover:bg-red-300'
+            className='px-8 py-2 text-white font-semibold mt-6 bg-red-400 rounded-full mx-auto hover:bg-red-300'
             type='submit'
           >
             Sign Up
           </button>
         </div>
       </form>
+
+      <div className='flex items-center w-full max-w-lg mx-auto'>
+        {/* For Signup with google */}
+        <button className='w-1/3 py-2 text-white font-semibold bg-red-400 rounded-full mx-auto hover:bg-red-300'>
+          <i class='fab fa-google'></i> Google
+        </button>
+        {/* For Signup with facebook  */}
+        <button className=' w-1/3 py-2 text-white font-semibold bg-red-400 rounded-full mx-auto hover:bg-red-300'>
+          <i class='fab fa-facebook-f'></i> Facebook
+        </button>
+        <button></button>
+      </div>
     </div>
   );
 };
