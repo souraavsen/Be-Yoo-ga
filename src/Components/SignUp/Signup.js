@@ -2,25 +2,49 @@ import React from "react";
 import { Link } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 
-
 const Signup = () => {
+  const {
+    googleSignin,
+    setEmail,
+    setPassword,
+    SingUpWithEmail,
+    error,
+    setFirstName,
+    setLastName,
+  } = useAuth();
 
-  const { googleSignin } = useAuth();
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const handleFirstName = (e) => {
+    setFirstName(e.target.value);
+  };
+
+  const handleLastName = (e) => {
+    setLastName(e.target.value);
+  };
+
 
   return (
-    <div className='flex flex-col h-screen pt-24'>
-      <form class='w-full max-w-lg mx-auto'>
+    <div className='flex flex-col h-screen pt-16'>
+      <form
+        class='w-full max-w-lg mx-auto'
+        onSubmit={(e) => {
+          SingUpWithEmail(e);
+        }}
+      >
         <div className='flex mb-6'>
-          <div className='w-1/2 bg-red-300 py-2 text-center'>
-            <Link className='hover:text-black' to={"/signup"}>
-              Sign Up
-            </Link>
-          </div>
-          <div className='w-1/2 py-2 text-center'>
-            <Link className='hover:text-black' to={"/signin"}>
-              Sign In
-            </Link>
-          </div>
+          <Link className='w-full bg-red-300 hover:text-black' to={"/signup"}>
+            <div className='py-2 text-center'>Sign Up</div>
+          </Link>
+          <Link className='w-full hover:text-black' to={"/signin"}>
+            <div className=' py-2 text-center'>Sign In</div>
+          </Link>
         </div>
         <div class='flex flex-wrap -mx-3 mb-6'>
           <div class='w-full md:w-1/2 px-3 mb-6 md:mb-0'>
@@ -34,6 +58,7 @@ const Signup = () => {
               class='block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white'
               type='text'
               placeholder='first name'
+              onChange={handleFirstName}
             />
           </div>
           <div class='w-full md:w-1/2 px-3'>
@@ -47,10 +72,10 @@ const Signup = () => {
               class='block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500'
               type='text'
               placeholder='last name'
+              onChange={handleLastName}
             />
           </div>
         </div>
-
         <div className='-mx-3 mb-6'>
           <div class='w-full px-3'>
             <label
@@ -64,6 +89,7 @@ const Signup = () => {
               type='emial'
               required
               placeholder='example@example.com'
+              onChange={handleEmailChange}
             />
           </div>
         </div>
@@ -76,15 +102,15 @@ const Signup = () => {
             >
               Password
             </label>
-            <p class='text-gray-600 text-xs italic'>
-              Select password of at least 6 character.
-            </p>
+
             <input
               class='block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500'
               type='password'
               required
               placeholder='password'
+              onChange={handlePasswordChange}
             />
+            <p class='text-xs italic text-red-500 text-center'>{error}</p>
           </div>
           <button
             className='px-8 py-2 text-white font-semibold mt-6 bg-red-400 rounded-full mx-auto hover:bg-red-300'
@@ -94,7 +120,12 @@ const Signup = () => {
           </button>
         </div>
       </form>
-
+      <p className='text-center'>
+        Already have an account?{" "}
+        <span className='text-red-500 hover:text-red-500'>
+          <Link to={"/signin"}>Sign in</Link>
+        </span>
+      </p>
       <div className='flex items-center w-full max-w-lg mx-auto py-10'>
         {/* For Signup with google */}
         <button

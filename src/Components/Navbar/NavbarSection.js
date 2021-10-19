@@ -8,7 +8,6 @@ const NavbarSection = () => {
 
   const {user, googleSignOut}=useAuth()
 
-  console.log(user);
   return (
     <div className='sticky top-0 z-50'>
       <Navbar bg='light' expand='lg'>
@@ -51,7 +50,7 @@ const NavbarSection = () => {
               </Link>
 
               {user.email && (
-                <div className='flex justify-between items-center mr-2'>
+                <div className='flex flex-col md:flex-row justify-center md:justify-between items-center mr-2'>
                   <img
                     className='rounded-full mr-2'
                     src={user.photoURL}
