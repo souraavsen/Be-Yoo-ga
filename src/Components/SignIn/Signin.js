@@ -31,7 +31,7 @@ const Signin = () => {
           signInWithEmail(e);
         }}
       >
-        <div className='flex mb-6'>
+        <div className='w-11/12 lg:w-full mx-auto flex mb-6'>
           <Link className='w-full hover:text-black' to={"/signup"}>
             <div className='py-2 text-center'>Sign Up</div>
           </Link>
@@ -41,7 +41,7 @@ const Signin = () => {
         </div>
 
         <div className='-mx-3 mb-6'>
-          <div class='w-full px-3'>
+          <div class='w-11/12 lg:w-full mx-auto px-3'>
             <label
               class='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'
               for='grid-last-name'
@@ -59,7 +59,7 @@ const Signin = () => {
         </div>
 
         <div class='flex flex-wrap -mx-3 mb-6'>
-          <div class='w-full px-3'>
+          <div class='w-11/12 lg:w-full mx-auto px-3'>
             <label
               class='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'
               for='grid-password'

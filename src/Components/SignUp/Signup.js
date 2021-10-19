@@ -34,14 +34,14 @@ const Signup = () => {
 
 
   return (
-    <div className='flex flex-col h-screen pt-16'>
+    <div className='flex flex-col h-screen pt-16 mb-36'>
       <form
         class='w-full max-w-lg mx-auto'
         onSubmit={(e) => {
           SingUpWithEmail(e);
         }}
       >
-        <div className='flex mb-6'>
+        <div className='flex w-11/12 lg:w-full mx-auto mb-6'>
           <Link className='w-full bg-red-300 hover:text-black' to={"/signup"}>
             <div className='py-2 text-center'>Sign Up</div>
           </Link>
@@ -50,7 +50,7 @@ const Signup = () => {
           </Link>
         </div>
         <div class='flex flex-wrap -mx-3 mb-6'>
-          <div class='w-full md:w-1/2 px-3 mb-6 md:mb-0'>
+          <div class='w-11/12 lg:w-full mx-auto md:w-1/2 px-3 mb-6 md:mb-0'>
             <label
               class='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'
               for='grid-first-name'
@@ -64,7 +64,7 @@ const Signup = () => {
               onChange={handleFirstName}
             />
           </div>
-          <div class='w-full md:w-1/2 px-3'>
+          <div class='w-11/12 lg:w-full mx-auto md:w-1/2 px-3'>
             <label
               class='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'
               for='grid-last-name'
@@ -80,7 +80,7 @@ const Signup = () => {
           </div>
         </div>
         <div className='-mx-3 mb-6'>
-          <div class='w-full px-3'>
+          <div class='w-11/12 lg:w-full mx-auto px-3'>
             <label
               class='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'
               for='grid-last-name'
@@ -98,7 +98,7 @@ const Signup = () => {
         </div>
 
         <div class='flex flex-wrap -mx-3 mb-6'>
-          <div class='w-full px-3'>
+          <div class='w-11/12 lg:w-full mx-auto px-3'>
             <label
               class='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'
               for='grid-password'

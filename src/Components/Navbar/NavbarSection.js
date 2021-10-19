@@ -1,23 +1,34 @@
 import React from "react";
-import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
+import { Navbar, Nav, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import logo from "../../Images/logo-1.png";
+import useravatar from "../../Images/user.png";
 
 const NavbarSection = () => {
+  const { user, googleSignOut } = useAuth();
 
-  const {user, googleSignOut}=useAuth()
+  let userimg;
+
+  if (user.photoURL) {
+    userimg = user.photoURL;
+  } else {
+    userimg = useravatar;
+  }
 
   return (
     <div className='sticky top-0 z-50'>
-      <Navbar bg='light' expand='lg'>
-        <Container className='mx-20'>
-          <div className='flex justify-center items-center'>
+      <Navbar className='lg:h-16 py-3' bg='light' expand='lg'>
+        <Container className=' mx-auto lg:mx-20 md:mx-20'>
+          <Link
+            to='/'
+            className='flex justify-center items-center hover:text-black'
+          >
             <img src={logo} className='mr-2' width='25px' alt='' />
-            <Navbar.Brand className='font-semibold text-2xl' to='/'>
+            <div className='font-semibold text-2xl cursor-pointer'>
               Be Yoo-ga
-            </Navbar.Brand>
-          </div>
+            </div>
+          </Link>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
             <Nav className='ms-auto flex items-center'>
@@ -53,7 +64,7 @@ const NavbarSection = () => {
                 <div className='flex flex-col md:flex-row justify-center md:justify-between items-center mr-2'>
                   <img
                     className='rounded-full mr-2'
-                    src={user.photoURL}
+                    src={userimg}
                     width='40px'
                     alt='img'
                   />

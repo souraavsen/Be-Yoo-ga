@@ -14,7 +14,7 @@ const AllServices = () => {
             All Services
           </h1>
 
-          <div className='flex flex-col item-center'>
+          <div className='flex flex-col item-center mx-auto'>
             <div className='w-5/6 mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-8'>
               {services.map((service) => (
                 <Service key={service.id} service={service}></Service>

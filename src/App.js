@@ -11,6 +11,7 @@ import Resources from "./Components/Resources/Resources";
 import AuthProvider from "./Context/AuthProvider";
 import ServiceDetails from "./Components/Services/ServiceDetails";
 import PrivateRoute from "./Components/SignIn/PrivateRoute/PrivateRoute";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
@@ -48,6 +49,7 @@ function App() {
               <NotFound></NotFound>
             </Route>
           </Switch>
+          <Footer></Footer>
         </AuthProvider>
       </Router>
     </div>

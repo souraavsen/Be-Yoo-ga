@@ -1,7 +1,7 @@
 import React from 'react'
 import { Card } from "react-bootstrap";
 import blog1 from "../../Images/blog1.jpg";
-import blog2 from "../../Images/blog-3.jpg";
+import blog2 from "../../Images/blog-3.png";
 import blog3 from "../../Images/blog4.jpg";
 
 const Blogs = () => {
@@ -11,7 +11,7 @@ const Blogs = () => {
         <div className='pb-12'>
           <div>
             <h1 className='text-5xl text-center pt-8 pb-12 font-semibold  text-red-400'>
-              Blogs
+              Latest Blogs
             </h1>
             <div className='w-5/6 mx-auto mt-10 mb-16 lg:flex justify-between items-center'>
               <div className='mb-12 lg:w-5/12 lg:mb-0'>
@@ -68,11 +68,12 @@ const Blogs = () => {
                 <Card.Img className='h-44' variant='top' src={blog2} />
                 <Card.Body>
                   <Card.Title className='h-20'>
-                    Ultimate Pull-Up Program & Ultimate Push-Up Program
+                    TRAIL RUNNING, PORTLAND & BEND!
                   </Card.Title>
                   <Card.Text className='truncate'>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+                    hello, my lovelies! you may have seen on my social media
+                    that i spent the weekend in portland & bend, oregon running
+                    a TRAIL 
                   </Card.Text>
                   <button className='text-red-500 py-2'>Read More</button>
                 </Card.Body>

@@ -7,13 +7,15 @@ const Welcome = () => {
       <h1 className='text-3xl text-center pt-16 pb-12 font-semibold text-red-500'>
         Welcome to Be Yoo-ga
       </h1>
-      <div className='container flex justify-between'>
-        <div className='w-1/2 flex justify-center items-center'>
+      <div className='container md:flex justify-between'>
+        <div className='w-1/3 mx-auto mb-6 md:w-1/2 flex justify-center items-center'>
           <img src={logo} alt='' />
         </div>
 
-        <div className='w-1/2'>
-          <h1 className='text-xl pb-4 font-semibold text-black'>Be Yoo-ga</h1>
+        <div className='md:w-1/2 lg:w-1/2'>
+          <h1 className='text-xl pb-4 font-semibold text-black text-justify'>
+            Be Yoo-ga
+          </h1>
           Be Yoo-ga is a plartform which help people to keep fit and healthy. It
           a ont only offline but also a online based plartform here a lot of
           expart trainers share their experience and teach people to do their
