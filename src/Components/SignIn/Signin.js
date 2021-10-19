@@ -1,9 +1,11 @@
 import React from 'react'
 import { Link } from "react-router-dom";
+import useAuth from '../../Hooks/useAuth';
 
 const Signin = () => {
+  const { googleSignin} = useAuth()
     return (
-      <div className='flex flex-col h-screen pt-28 -mt-16'>
+      <div className='flex flex-col h-screen pt-28  '>
         <form class='flex flex-col w-full max-w-lg mx-auto'>
           <div className='flex mb-6'>
             <div className='w-full py-2 text-center'>
@@ -60,9 +62,12 @@ const Signin = () => {
             </button>
           </div>
         </form>
-        <div className='flex items-center w-full max-w-lg mx-auto mt-10'>
+        <div className='flex items-center w-full max-w-lg mx-auto mt-10 py-10'>
           {/* For Signup with google */}
-          <button className='w-1/3 py-2 text-white font-semibold bg-red-400 rounded-full mx-auto hover:bg-red-300'>
+          <button
+            className='w-1/3 py-2 text-white font-semibold bg-red-400 rounded-full mx-auto hover:bg-red-300'
+            onClick={googleSignin}
+          >
             <i class='fab fa-google'></i> Google
           </button>
           {/* For Signup with facebook  */}
