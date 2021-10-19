@@ -11,14 +11,17 @@ const Signup = () => {
     error,
     setFirstName,
     setLastName,
+    setError,
   } = useAuth();
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
+    setError("")
   };
 
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
+    setError("")
   };
 
   const handleFirstName = (e) => {

@@ -10,7 +10,7 @@ const Blogs = () => {
         {/* Fro Blog */}
         <div className='pb-12'>
           <div>
-            <h1 className='text-5xl text-center pt-8 pb-12 font-semibold font_akronim text-red-400'>
+            <h1 className='text-5xl text-center pt-8 pb-12 font-semibold  text-red-400'>
               Blogs
             </h1>
             <div className='w-5/6 mx-auto mt-10 mb-16 lg:flex justify-between items-center'>

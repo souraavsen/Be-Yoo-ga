@@ -122,6 +122,7 @@ const useFirebase = () => {
     setEmail,
     setPassword,
     error,
+    setError,
     setFirstName,
     setLastName,
   };

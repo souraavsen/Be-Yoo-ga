@@ -15,7 +15,7 @@ const NavbarSection = () => {
           <div className='flex justify-center items-center'>
             <img src={logo} className='mr-2' width='25px' alt='' />
             <Navbar.Brand className='font-semibold text-2xl' to='/'>
-              Be Better
+              Be Yoo-ga
             </Navbar.Brand>
           </div>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />

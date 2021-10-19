@@ -5,7 +5,7 @@ const Events = () => {
     <div className='my-10'>
       {/* ongoinging Event section  */}
       <div>
-        <h2 className='text-xl md:text-3xl lg:text-5xl text-center pt-8 pb-4 font-semibold font_akronim text-red-400'>
+        <h2 className='text-xl md:text-3xl lg:text-5xl text-center pt-8 pb-4 font-semibold text-red-400'>
           Ongoing Events
         </h2>
         <div className='md:w-1/2 lg:w-1/2 mx-auto'>
@@ -43,7 +43,7 @@ const Events = () => {
 
       {/* Upcomming Event section  */}
       <div>
-        <h2 className='text-xl md:text-3xl lg:text-5xl text-center pt-6 pb-4 font-semibold font_akronim text-red-400'>
+        <h2 className='text-xl md:text-3xl lg:text-5xl text-center pt-6 pb-4 font-semibold text-red-400'>
           Upcomming Events
         </h2>
         <div className='md:w-1/2 lg:w-1/2 mx-auto'>

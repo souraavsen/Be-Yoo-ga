@@ -3,16 +3,24 @@ import { Link } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 
 const Signin = () => {
-  const { setEmail, setPassword, signInWithEmail, googleSignin, error } =
-    useAuth();
+  const {
+    setEmail,
+    setPassword,
+    signInWithEmail,
+    googleSignin,
+    error,
+    setError,
+  } = useAuth();
   // const location = useLocation();
 
   const handleEmail = (e) => {
     setEmail(e.target.value);
+    setError("");
   };
 
   const handlePassword = (e) => {
     setPassword(e.target.value);
+    setError("");
   };
 
   return (
