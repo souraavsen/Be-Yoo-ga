@@ -8,7 +8,6 @@ const useServices = () => {
       .then((data) => setServices(data));
   }, []);
     
-    console.log(services);
   return [services, setServices];
 };
 

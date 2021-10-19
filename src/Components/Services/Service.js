@@ -1,11 +1,11 @@
 import React from "react";
 import { Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "./Service.css"
 
 const Service = (props) => {
-    const { service_name, img, description, days, fees, type } = props.service
+    const { id,service_name, img, description, days, fees, type } = props.service
     
-    console.log(img);
   return (
     <div>
       <Card className='w-80 mx-auto shadow-md'>
@@ -18,9 +18,12 @@ const Service = (props) => {
           <p className='text-red-500'>{days}</p>
           <p className='font-semibold text-red-500'>${fees}/Month</p>
           <p className='text-red-500'>{type}</p>
-          <button className='my-6 px-4 rounded-full py-1 bg-red-400 text-white font-semibold'>
+          <Link
+            to={`/services-details/${id}`}
+            className='my-6 px-4 rounded-full py-1 bg-red-400 text-white font-semibold'
+          >
             Explore
-          </button>
+          </Link>
         </Card.Body>
       </Card>
     </div>

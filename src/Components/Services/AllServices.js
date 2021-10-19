@@ -6,7 +6,6 @@ const AllServices = () => {
 
     const [services]=useServices()
 
-    console.log(services);
     return (
       <div>
         {/* <img src={serviceheader} className='-mt-16' alt='' /> */}

@@ -8,6 +8,7 @@ const NavbarSection = () => {
 
   const {user, googleSignOut}=useAuth()
 
+  console.log(user);
   return (
     <div className='sticky top-0 z-50'>
       <Navbar bg='light' expand='lg'>
@@ -27,12 +28,7 @@ const NavbarSection = () => {
               >
                 Home
               </Link>
-              <Link
-                className='mr-4 text-black border-b-2 border-transparent hover:border-red-400'
-                to='/about'
-              >
-                About
-              </Link>
+
               <Link
                 className='mr-4 text-black border-b-2 border-transparent hover:border-red-400'
                 to='/services'
@@ -40,13 +36,31 @@ const NavbarSection = () => {
                 Services
               </Link>
 
-              {user.email && 
-                
+              <Link
+                className='mr-4 text-black border-b-2 border-transparent hover:border-red-400'
+                to='/events'
+              >
+                Events
+              </Link>
+
+              <Link
+                className='mr-4 text-black border-b-2 border-transparent hover:border-red-400'
+                to='/resources'
+              >
+                Resources
+              </Link>
+
+              {user.email && (
                 <div className='flex justify-between items-center mr-2'>
-                  <img className="rounded-full mr-2" src={user.photoURL} width="40px" alt="" />
+                  <img
+                    className='rounded-full mr-2'
+                    src={user.photoURL}
+                    width='40px'
+                    alt='img'
+                  />
                   <h4>{user.displayName}</h4>
                 </div>
-              }
+              )}
 
               {user.email ? (
                 <Link

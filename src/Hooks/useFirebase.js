@@ -14,7 +14,7 @@ initAuthentication();
 
 const useFirebase = () => {
   const [user, setUser] = useState({});
-  const [isLoading, setIsLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
   // this part is for changing route of user after login 
   const location = useLocation()
@@ -27,14 +27,14 @@ const useFirebase = () => {
 
   // Function for signin with google
   const googleSignin = () => {
-    setIsLoading(true);
+    setLoading(true);
 
     signInWithPopup(auth, gAuthProvider)
       .then((result) => {
         setUser(result.user);
         history.push(redirect_url);
       })
-      .finally(() => setIsLoading(false));
+      .finally(() => setLoading(false));
   };
 
   // this is a auth observer with observe all changes for the user
@@ -45,17 +45,20 @@ const useFirebase = () => {
       } else {
         setUser({});
       }
+      setLoading(false);
     });
   }, []);
 
   // Log out code
   const googleSignOut = () => {
-    signOut(auth).then(() => {
-      setUser({});
-    });
+    signOut(auth)
+      .then(() => {
+        setUser({});
+      })
+      .finally(() => setLoading(false));
   };
 
-  return { user, googleSignin, googleSignOut };
+  return { user, loading, googleSignin, googleSignOut };
 };
 
 export default useFirebase;
