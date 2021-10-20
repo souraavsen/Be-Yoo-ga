@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React from "react";
 import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
 import { useParams } from "react-router";
 import { data } from "./ServiceData";
@@ -6,27 +6,37 @@ import { data } from "./ServiceData";
 const ServiceDetails = () => {
   // geting te clicked service id
   const { serviceId } = useParams();
-  console.log(serviceId);
 
+  // finding the clicked service from all services
   const clickedService = data.find((service) => service.id == serviceId);
 
   return (
     <div>
       <Card className='w-11/12 lg:w-8/12 mx-auto mb-20'>
-        <Card.Img className='w-screen' variant='top' src={clickedService.img} />
+        <Card.Img className='pb-6' variant='top' src={clickedService.img} />
         <div className='lg:grid lg:grid-cols-2 justify-center '>
           <Card.Body>
-            <Card.Title>{clickedService.service_name}</Card.Title>
+            <Card.Title className="pb-4">{clickedService.service_name}</Card.Title>
             <Card.Text>{clickedService.description}</Card.Text>
           </Card.Body>
           <ListGroup className='list-group-flush border-l-2 pt-10'>
             <ListGroupItem>
-              Days in Week: <span className="text-red-500 font-medium">{clickedService.days}</span>
+              Days in Week:{" "}
+              <span className='text-red-500 font-medium'>
+                {clickedService.days}
+              </span>
             </ListGroupItem>
             <ListGroupItem>
-              Fees: <span className="text-red-500 font-medium">${clickedService.fee}/Month</span>
+              Fees:{" "}
+              <span className='text-red-500 font-medium'>
+                ${clickedService.fees}/Month
+              </span>
             </ListGroupItem>
-            <ListGroupItem><span className="text-red-500 font-medium px-2 py-1 border-2 border-red-500 rounded-full">{clickedService.type}</span></ListGroupItem>
+            <ListGroupItem>
+              <span className='text-red-500 font-medium px-2 py-1 border-2 border-red-500 rounded-full'>
+                {clickedService.type}
+              </span>
+            </ListGroupItem>
           </ListGroup>
         </div>
         <Card.Body className='flex items-center'>

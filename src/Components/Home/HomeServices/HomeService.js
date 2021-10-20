@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 const HomeService = (props) => {
   const { id, service_name, img, days } = props.service;
 
+  // single services of home page
   return (
     <Link
       to={`/services-details/${id}`}
@@ -21,7 +22,6 @@ const HomeService = (props) => {
         <p className='text-red-500'>{days}</p>
       </div>
       <div>
-        {/* <i class='fas fa-sticky-note text-xl text-red-400'></i> */}
         <i class='fas fa-thumbtack text-sm text-red-900 transform rotate-45'></i>
       </div>
     </Link>

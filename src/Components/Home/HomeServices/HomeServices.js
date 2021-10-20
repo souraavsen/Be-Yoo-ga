@@ -6,6 +6,7 @@ import HomeService from "./HomeService";
 const HomeServices = () => {
   const [services] = useServices();
 
+  // first 6 jobs
   const hilightedServes = services.slice(0, 6);
 
     return (

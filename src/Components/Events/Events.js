@@ -41,7 +41,7 @@ const Events = () => {
         </div>
       </div>
 
-      {/* Upcomming Event section  */}
+      {/* Upcoming Event section  */}
       <div>
         <h2 className='text-3xl md:text-3xl lg:text-5xl text-center pt-6 pb-4 font-semibold text-red-400'>
           Upcoming Events

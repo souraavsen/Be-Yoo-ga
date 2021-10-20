@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+// all esstional elements for firebase authentication
 import {
   getAuth,
   signInWithPopup,
@@ -35,7 +36,8 @@ const useFirebase = () => {
 
   // Signup and Signin with Email and password
   const SingUpWithEmail = (e) => {
-    e.preventDefault();    
+    e.preventDefault();
+    // verifying password strength
      if (!/(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{6}/.test(password)) {
        setError(
          "Password should be at least of 6 characters also must have one uppercase letter, one digits and one lowercase letter"
@@ -112,6 +114,7 @@ const useFirebase = () => {
       .finally(() => setLoading(false));
   };
 
+  // returning all essential function and others
   return {
     user,
     loading,

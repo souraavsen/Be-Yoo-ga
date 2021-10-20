@@ -1,5 +1,6 @@
 import React from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
+// importing essentials from react-router
 import { Link } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import logo from "../../Images/logo-1.png";
@@ -10,6 +11,7 @@ const NavbarSection = () => {
 
   let userimg;
 
+  //  if image is not available then the default avatar will be shown
   if (user.photoURL) {
     userimg = user.photoURL;
   } else {
@@ -72,6 +74,7 @@ const NavbarSection = () => {
                 </div>
               )}
 
+              {/* if user login then name and image will be shown */}
               {user.email ? (
                 <Link
                   className='px-3 mr-2 my-auto hover:bg-red-300 hover:text-white rounded-full border-2 border-red-400 text-black'
