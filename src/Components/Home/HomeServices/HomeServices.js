@@ -7,7 +7,6 @@ const HomeServices = () => {
   const [services] = useServices();
 
   const hilightedServes = services.slice(0, 6);
-  console.log(hilightedServes);
 
     return (
       <div className="container pb-16 flex flex-col justify-center items-center">

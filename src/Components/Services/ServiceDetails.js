@@ -1,47 +1,36 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
 import { useParams } from "react-router";
-import useServices from "../../Hooks/useServices";
+import { data } from "./ServiceData";
 
 const ServiceDetails = () => {
-
-  const [service, setService] = useState([]);
-
-
   // geting te clicked service id
   const { serviceId } = useParams();
+  console.log(serviceId);
 
-  // const [services] = useServices();
-  
-  useEffect(() => {
-    fetch("./Data.json",{headers : { 
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-       }})
-    .then((res) => res.json())
-    .then((data) => setService(data));
-  }, []);
-  
-  console.log(service);
-  // Finding the selected service according to service's id
-  const clickedService = service.filter((service) => service.id === serviceId);
-  console.log(clickedService);
+  const clickedService = data.find((service) => service.id == serviceId);
 
   return (
     <div>
-      <Card className='w-8/12 mx-auto mb-20'>
-        <Card.Img variant='top' src='https://i.ibb.co/nwwyzRK/kids.jpg' />
-        <Card.Body>
-          <Card.Title>{clickedService.service_name}</Card.Title>
-          <Card.Text>{clickedService.description}</Card.Text>
-        </Card.Body>
-        <ListGroup className='list-group-flush'>
-          <ListGroupItem>Days in Week: {clickedService.days}</ListGroupItem>
-          <ListGroupItem>Fees: ${clickedService.fee}/Month</ListGroupItem>
-          <ListGroupItem>{clickedService.type}</ListGroupItem>
-        </ListGroup>
+      <Card className='w-11/12 lg:w-8/12 mx-auto mb-20'>
+        <Card.Img className='w-screen' variant='top' src={clickedService.img} />
+        <div className='lg:grid lg:grid-cols-2 justify-center '>
+          <Card.Body>
+            <Card.Title>{clickedService.service_name}</Card.Title>
+            <Card.Text>{clickedService.description}</Card.Text>
+          </Card.Body>
+          <ListGroup className='list-group-flush border-l-2 pt-10'>
+            <ListGroupItem>
+              Days in Week: <span className="text-red-500 font-medium">{clickedService.days}</span>
+            </ListGroupItem>
+            <ListGroupItem>
+              Fees: <span className="text-red-500 font-medium">${clickedService.fee}/Month</span>
+            </ListGroupItem>
+            <ListGroupItem><span className="text-red-500 font-medium px-2 py-1 border-2 border-red-500 rounded-full">{clickedService.type}</span></ListGroupItem>
+          </ListGroup>
+        </div>
         <Card.Body className='flex items-center'>
-          <button className='px-5 rounded-full py-1 mx-auto bg-red-400 text-white font-semibold'>
+          <button className='px-5 rounded-full my-10 py-1 mx-auto bg-red-400 text-white font-semibold'>
             Join
           </button>
         </Card.Body>

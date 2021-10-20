@@ -7,8 +7,8 @@ const Service = (props) => {
     const { id,service_name, img, description, days, fees, type } = props.service
     
   return (
-    <div className="mx-auto">
-      <Card className='w-80 mx-auto shadow-md'>
+    <div className='mx-auto'>
+      <Card className='w-80 mx-auto shadow-md rounded-bl-3xl'>
         <Card.Img className='card_img' variant='top' src={img} />
         <Card.Body className='flex flex-col items-center'>
           <Card.Title>{service_name}</Card.Title>

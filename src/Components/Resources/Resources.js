@@ -5,7 +5,7 @@ import TipsAndTricks from './TipsAndTricks';
 
 const Resources = () => {
     return (
-      <div>
+      <div className='z-50'>
         <Blogs></Blogs>
         <TipsAndTricks></TipsAndTricks>
       </div>

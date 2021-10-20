@@ -5,11 +5,11 @@ const Events = () => {
     <div className='my-10'>
       {/* ongoinging Event section  */}
       <div>
-        <h2 className='text-xl md:text-3xl lg:text-5xl text-center pt-8 pb-4 font-semibold text-red-400'>
+        <h2 className='text-3xl md:text-3xl lg:text-5xl text-center pt-8 pb-4 font-semibold text-red-400'>
           Ongoing Events
         </h2>
         <div className='md:w-1/2 lg:w-1/2 mx-auto'>
-          <div className='flex bg-green-50 p-4 rounded-lg shadow-md my-4'>
+          <div className='w-11/12 lg:w-full md:w-full mx-auto flex bg-green-50 p-4 rounded-lg shadow-md my-4'>
             <div>
               <i class='fas fa-bell mr-4 text-green-800'></i>
             </div>
@@ -24,7 +24,7 @@ const Events = () => {
             </div>
           </div>
 
-          <div className='flex bg-green-50 p-4 rounded-lg shadow-md my-4'>
+          <div className='w-11/12 lg:w-full md:w-full mx-auto flex bg-green-50 p-4 rounded-lg shadow-md my-4'>
             <div>
               <i class='fas fa-bell mr-4 text-green-800'></i>
             </div>
@@ -43,11 +43,11 @@ const Events = () => {
 
       {/* Upcomming Event section  */}
       <div>
-        <h2 className='text-xl md:text-3xl lg:text-5xl text-center pt-6 pb-4 font-semibold text-red-400'>
-          Upcomming Events
+        <h2 className='text-3xl md:text-3xl lg:text-5xl text-center pt-6 pb-4 font-semibold text-red-400'>
+          Upcoming Events
         </h2>
-        <div className='md:w-1/2 lg:w-1/2 mx-auto'>
-          <div className='flex bg-red-100 p-4 rounded-lg shadow-md my-4'>
+        <div className='md:w-1/2 lg:w-1/2 mx-auto pb-12'>
+          <div className='w-11/12 lg:w-full md:w-full mx-auto flex bg-red-100 p-4 rounded-lg shadow-md my-4'>
             <div>
               <i class='fas fa-bell mr-4 text-red-700'></i>
             </div>
@@ -62,7 +62,7 @@ const Events = () => {
             </div>
           </div>
 
-          <div className='flex bg-red-100 p-4 rounded-lg shadow-md my-4'>
+          <div className='w-11/12 lg:w-full md:w-full mx-auto flex bg-red-100 p-4 rounded-lg shadow-md my-4'>
             <div>
               <i class='fas fa-bell mr-4 text-red-700'></i>
             </div>
@@ -77,7 +77,7 @@ const Events = () => {
             </div>
           </div>
 
-          <div className='flex bg-red-100 p-4 rounded-lg shadow-md my-4'>
+          <div className='w-11/12 lg:w-full md:w-full mx-auto flex bg-red-100 p-4 rounded-lg shadow-md my-4'>
             <div>
               <i class='fas fa-bell mr-4 text-red-700'></i>
             </div>
@@ -92,7 +92,7 @@ const Events = () => {
             </div>
           </div>
 
-          <div className='flex bg-red-100 p-4 rounded-lg shadow-md my-4'>
+          <div className='w-11/12 lg:w-full md:w-full mx-auto flex bg-red-100 p-4 rounded-lg shadow-md my-4'>
             <div>
               <i class='fas fa-bell mr-4 text-red-700'></i>
             </div>

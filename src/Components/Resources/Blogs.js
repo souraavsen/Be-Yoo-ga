@@ -8,9 +8,9 @@ const Blogs = () => {
     return (
       <div>
         {/* Fro Blog */}
-        <div className='pb-12'>
+        <div className='py-12'>
           <div>
-            <h1 className='text-5xl text-center pt-8 pb-12 font-semibold  text-red-400'>
+            <h1 className='text-3xl md:text-3xl lg:text-5xl  text-center pb-12 font-semibold  text-red-400'>
               Latest Blogs
             </h1>
             <div className='w-5/6 mx-auto mt-10 mb-16 lg:flex justify-between items-center'>
@@ -73,7 +73,7 @@ const Blogs = () => {
                   <Card.Text className='truncate'>
                     hello, my lovelies! you may have seen on my social media
                     that i spent the weekend in portland & bend, oregon running
-                    a TRAIL 
+                    a TRAIL
                   </Card.Text>
                   <button className='text-red-500 py-2'>Read More</button>
                 </Card.Body>

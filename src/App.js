@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./Components/Home/Home";
 import NavbarSection from "./Components/Navbar/NavbarSection";
@@ -12,8 +12,14 @@ import AuthProvider from "./Context/AuthProvider";
 import ServiceDetails from "./Components/Services/ServiceDetails";
 import PrivateRoute from "./Components/SignIn/PrivateRoute/PrivateRoute";
 import Footer from "./Components/Footer/Footer";
+import useServices from "./Hooks/useServices";
+import { useState } from "react";
 
 function App() {
+  const [serviceFlag, setServiceFlag] = useState(true);
+
+  const [services] = useServices();
+
   return (
     <div>
       <Router>
@@ -27,7 +33,11 @@ function App() {
               <AllServices></AllServices>
             </PrivateRoute>
             <PrivateRoute path='/services-details/:serviceId'>
-              <ServiceDetails></ServiceDetails>
+                <ServiceDetails
+                  services={services}
+                  setServiceFlag={setServiceFlag}
+                  serviceFlag={serviceFlag}
+                ></ServiceDetails>
             </PrivateRoute>
             <PrivateRoute path='/events'>
               <Events></Events>

@@ -5,7 +5,7 @@ import tips2 from "../../Images/tips2.jpeg";
 const TipsAndTricks = () => {
     return (
       <div>
-        <h1 className='text-5xl text-center pt-8 pb-12 font-semibold text-red-400'>
+        <h1 className='text-3xl md:text-3xl lg:text-5xl text-center pt-8 pb-12 font-semibold text-red-400'>
           Tips & Tricks
         </h1>
         <div>

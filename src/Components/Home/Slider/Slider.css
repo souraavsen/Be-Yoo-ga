@@ -20,8 +20,24 @@
     clip-path: polygon(0 0, 22% 0, 100% 100%, 0% 100%);
 }
 
-@media only screen and (max-width: 688px) {
+
+.slide2-content{
+    float: right;
+    clip-path: polygon(0 0, 69% 0, 48% 100%, 0% 100%);
+}
+
+.slide3-content{
+    clip-path: polygon(43% 25%, 100% 27%, 89% 100%, 28% 100%);
+}
+
+@media only screen and (max-width: 720px) {
 .slide1-content{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+.slide2-content{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+.slide3-content{
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 }
