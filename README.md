@@ -1,12 +1,15 @@
 # Be Yoo-ga
 
-Livesite Link: [Create React App](https://github.com/facebook/create-react-app).
+Livesite Link: [https://be-better-eab93.web.app/](https://be-better-eab93.web.app/).
 
 ## About Be Yoo-ga
 Be Yoo-ga is a yoga learning plartform where everyone of every ages people can learn. Peopole will also benifited with daily blogs and many other health tips. There are always live updates of all onging and upcoming events and programs. 
 
-*
-
+* This is a website where people will find different typs of yoga call,
+* People can also join themself to the classes. On service page people will able to find all classes and join themselve.
+* People will be able to find all running and upcoming events on yoga and also able to get some blogs to enhance knowledge on yoga. 
+* There are also some tips and tricks on yoga on Resources page. User have to join after sign and login to with email and password,
+* Auto password strength checker at the time of register account. also there are some information of all trainer.
 
 
 
